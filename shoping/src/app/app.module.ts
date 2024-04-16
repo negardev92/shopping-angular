@@ -3,16 +3,31 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProductsComponent } from './products/products.component';
+import { HeaderComponent } from './header/header.component';
+import { ShopingCartComponent } from './shoping-cart/shoping-cart.component';
+import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from  '@angular/common/http';
+import{ProductapiService} from './productapi.service'
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductsComponent,
+    HeaderComponent,
+    ShopingCartComponent,
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule ,
   ],
-  providers: [],
+  providers: [ProductapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
