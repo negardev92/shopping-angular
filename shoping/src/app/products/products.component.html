@@ -1,14 +1,24 @@
 <div class="nav">
     <app-header></app-header>
+    <div class="about">
+        <img src="../../assets/shopping-fun.png"  style="height:450px;width: 450px;">
+    
+    <ul>Imagine that......
+        <li>Easily in your wallet</li>
+        <li>save your money</li>
+        <li>Increase the value of your money</li>
+        <li>Affordable</li>
+    </ul>
+    </div>
+    
 </div>
 <div  class="contianer">
     <div  class="products">
         <ul class="product-ul">
-           
             <li class="product-li" *ngFor="let post of posts" (click)="getid(post.id)">
-                <h4>discription:</h4>{{post.title }} <br>
-                <img src="{{post.image }}" class="product-img"><br>
                 
+                <img src="{{post.image }}" class="product-img"><br>
+                <h5>discription:{{post.title }} </h5><br>
                 <h3> price:{{post.price|currency}} </h3><br>
 
                 <button class="btn-add ">ADD</button>

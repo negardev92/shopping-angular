@@ -1,3 +1,18 @@
+.about{
+    display: flex;
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-size: 40px;
+    color: rgb(4, 102, 69);
+}
+.about li{
+    font-size: 20px; 
+    margin: 25px;
+    list-style-type: circle;
+    
+}
+
+
 .product-ul{
     display: flex;
     flex-wrap: wrap;
@@ -7,25 +22,70 @@
 }
 .product-li{
     border: 1px solid  rgba(240, 237, 237, 0.582);
-    width: 300px;height: 300px;
+    width: 300px;height: 410px;
     text-align: center;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
     gap: 5px;
     list-style: none;
     border-radius: 1%;
 }
+.product-li:hover{
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
 .product-img{
     width: 100px;height:100px;
+    padding: 45px;
+}
+h5{
+    width: 300px;
+    height: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    align-items: left;
+
+}
+h3{
+    font-family: "Kalam", cursive;
 }
 .btn-add{
-    cursor: pointer;
-    border-radius: 5%;
-    padding:5px;
-    background-color: transparent;
-    border: none;
-    box-shadow:  rgba(12, 139, 97, 0.548) 2px 2px 0px 3px;
-    margin: 5px;
-    width: 50px;
-    height: 20px;
+font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  outline: 0;
+  border: 1px solid rgb(4, 102, 69);;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  color: aliceblue;
+  font-family: "Kalam", cursive;
+}
+
+
+
+.btn-add:after {
+  content: "";
+  background-color: rgba(2, 112, 76, 0.493);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.btn-add:hover:after {
+  top: 0px;
+  left: 0px;
+  background-color: rgba(4, 102, 69)
+}
+
+@media (min-width: 768px) {
+  .btn-add {
+    padding: 13px 50px 13px;
+  }
 }
