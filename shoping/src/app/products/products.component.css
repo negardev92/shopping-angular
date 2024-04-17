@@ -1,0 +1,31 @@
+.product-ul{
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+    
+}
+.product-li{
+    border: 1px solid  rgba(240, 237, 237, 0.582);
+    width: 300px;height: 300px;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    gap: 5px;
+    list-style: none;
+    border-radius: 1%;
+}
+.product-img{
+    width: 100px;height:100px;
+}
+.btn-add{
+    cursor: pointer;
+    border-radius: 5%;
+    padding:5px;
+    background-color: transparent;
+    border: none;
+    box-shadow:  rgba(12, 139, 97, 0.548) 2px 2px 0px 3px;
+    margin: 5px;
+    width: 50px;
+    height: 20px;
+}

@@ -16,4 +16,7 @@ export class ProductsComponent implements OnInit {
     this.productapiService.getData().subscribe((data) => {this.posts = data});
   }
 
+ getid(id){
+  console.log(id);
+ }
 }

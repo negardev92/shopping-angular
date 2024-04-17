@@ -1,0 +1,29 @@
+.container{
+    width: 100%;
+  background-color: rgba(255, 252, 252, 0.527);
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+}
+.row{
+    display: flex;
+    float: right;
+}
+.btn-login{
+    border: none;
+    padding: 15px;
+    color: rgb(54, 53, 53);
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+.icon-shoping-cart{
+    
+    cursor: pointer;
+}
+.icon-logo{
+    margin-right: 150px;
+   position: absolute;
+   left:5px;
+}
