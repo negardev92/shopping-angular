@@ -9,7 +9,8 @@ import { ShopingCartComponent } from './shoping-cart/shoping-cart.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from  '@angular/common/http';
 import{ProductapiService} from './productapi.service';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component'
 
 
 
@@ -22,6 +23,7 @@ import { HomeComponent } from './home/home.component'
     ShopingCartComponent,
     FooterComponent,
     HomeComponent,
+    LoginComponent,
     
   ],
   imports: [
