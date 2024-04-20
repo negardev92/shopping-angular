@@ -10,9 +10,27 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from  '@angular/common/http';
 import{ProductapiService} from './productapi.service';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatButtonModule } from '@angular/material/button';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule,} from '@angular/material/form-field';
+import {MatCardModule,} from "@angular/material/card";
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
+
+const modules = [
+  MatButtonModule,
+  MatFormFieldModule,
+  BrowserAnimationsModule,
+  MatCardModule,
+  MatInputModule,
+  
+        
+  
+  
+];
 
 
 @NgModule({
@@ -29,9 +47,20 @@ import { LoginComponent } from './login/login.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule ,
+    HttpClientModule,
+    [...modules],
+    FormsModule,
+    ReactiveFormsModule,
+    
+    
   ],
-  providers: [ProductapiService],
+  exports: [
+    [...modules]
+   
+  ],
+  providers: [ 
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {floatLabel: 'always'}}
+  ,ProductapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
