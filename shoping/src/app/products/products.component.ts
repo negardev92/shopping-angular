@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import{ProductapiService} from '../productapi.service';
 
 
@@ -8,15 +8,28 @@ import{ProductapiService} from '../productapi.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  posts: any[];
-  constructor(private productapiService:ProductapiService,) { }
+  products: any[];
+  userbasket= [];
+  items =[] ;
 
+   
+  
+  constructor(private productapiService:ProductapiService,) { }
+  
   ngOnInit(): void {
 
-    this.productapiService.getData().subscribe((data) => {this.posts = data});
+    this.productapiService.getData().subscribe((data) => {this.products = data});
   }
 
- getid(id){
-  console.log(id);
+  
+ getId(event){
+  let item = this.products.find(i => i.id === event.id);
+  if(item != null){
+    this.userbasket.push(item);
+  }
+
+  
  }
+
 }
+
