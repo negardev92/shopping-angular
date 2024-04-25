@@ -1,1 +1,18 @@
-<h2>shoping </h2>
+
+<div  class="contianer">
+    <div  class="row">
+        <ul class="cart-ul">
+            <li class="cart-li" *ngFor="let userbasket of list ">
+                
+                <img src="{{userbasket.image }}" class="cart-img"><br>
+                <h5>discription:{{userbasket.title }} </h5><br>
+                <h3> price:{{userbasket.price|currency}} </h3><br>
+
+                <button class="btn-delet" >Delet</button>
+        
+            </li>
+          
+        </ul>
+        
+      
+</div>
