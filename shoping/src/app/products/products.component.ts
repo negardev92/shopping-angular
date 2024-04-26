@@ -8,7 +8,7 @@ import{ProductapiService} from '../productapi.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  products: any[];
+  products = [];
   userbasket= [];
   items =[] ;
 

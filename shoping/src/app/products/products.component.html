@@ -17,7 +17,7 @@
     <div  class="products">
         <ul class="product-ul">
             <li class="product-li" *ngFor="let product of products" (click)="getId(product)">
-                
+               
                 <img src="{{product.image }}" class="product-img"><br>
                 <h5>discription:{{product.title }} </h5><br>
                 <h3> price:{{product.price|currency}} </h3><br>
