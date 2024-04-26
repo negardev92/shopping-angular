@@ -17,7 +17,7 @@ import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule,} from '@angular/mate
 import {MatCardModule,} from "@angular/material/card";
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import {MatListModule} from '@angular/material/list';
 
 
 const modules = [
@@ -26,6 +26,7 @@ const modules = [
   BrowserAnimationsModule,
   MatCardModule,
   MatInputModule,
+  MatListModule,
   
         
   
