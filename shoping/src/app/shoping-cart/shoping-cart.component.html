@@ -5,11 +5,11 @@
     <ul class="cart-items" *ngIf="isShowing">
       <h2>shopping-cart</h2>
     <hr>
-      <li class="cart-item" *ngFor="let userbasket of list " >
+      <li class="cart-item" *ngFor="let userbasket of list ">
         <img src="{{userbasket.image }}" class="cart-img" style="width: 50px;height: 50px;"><br>
         <h6>discription:{{userbasket.title }} </h6><br>
         <h4> price:{{userbasket.price|currency}} </h4><br>
-        <button class="btn-delet">Delet</button>
+        <button class="btn-delet" (click)="deletItem(userbasket)">Delet</button>
 
     </li>
     <hr>

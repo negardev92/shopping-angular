@@ -10,12 +10,15 @@ productitem: any;
 
 @Input() list:[];
 
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  isShowing: boolean;
 
+  isShowing: boolean;
+    
   toggle() {
      
      this.isShowing = !this.isShowing;
@@ -24,5 +27,11 @@ productitem: any;
   callMethods() {
       this.toggle();
   }
+  
+  deletItem(list){
+    this.list.pop();
+  
+  }
+  
   
 }
