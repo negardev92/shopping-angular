@@ -1,19 +1,27 @@
-<input id="toggle" type="checkbox" style="visibility:hidden">
-<label for="toggle"><img class="icon-shoping-cart" src="../../assets/shoping cart icon/shopping-cart.svg" style="height: 50px;width: 30px;/"> </label>
-<div class="box" > 
-<div  class="contianer">
-    <div  class="cart">
-        <mat-list class="cart-ul">
-            <mat-list-item class="cart-li" *ngFor="let userbasket of list ">
+<div class="container">
+  <button (click)="toggle()" class="btn-shopping-cart ">shoping cart</button>
+  <div class="cart">
+    
+    <ul class="cart-items" *ngIf="isShowing">
+      <h2>shopping-cart</h2>
+    <hr>
+      <li class="cart-item" *ngFor="let userbasket of list " >
+        <img src="{{userbasket.image }}" class="cart-img" style="width: 50px;height: 50px;"><br>
+        <h6>discription:{{userbasket.title }} </h6><br>
+        <h4> price:{{userbasket.price|currency}} </h4><br>
+        <button class="btn-delet">Delet</button>
 
-                <img src="{{userbasket.image }}" class="cart-img"><br>
-                <h5>discription:{{userbasket.title }} </h5><br>
-                <h3> price:{{userbasket.price|currency}} </h3><br>
+    </li>
+    <hr>
+    <h3>total:</h3>
+    </ul>
+    
 
-                <button class="btn-delet" >Delet</button>
-
-            </mat-list-item>
-
-        </mat-list>
-    </div>
+  </div>
+</div>
+  
+                
+                  
+                
+          
 

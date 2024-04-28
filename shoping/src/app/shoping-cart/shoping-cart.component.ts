@@ -7,10 +7,22 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ShopingCartComponent implements OnInit {
 productitem: any;
+
 @Input() list:[];
+
   constructor() { }
 
   ngOnInit(): void {
   }
+  isShowing: boolean;
 
+  toggle() {
+     
+     this.isShowing = !this.isShowing;
+  }
+  
+  callMethods() {
+      this.toggle();
+  }
+  
 }
