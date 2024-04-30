@@ -1,24 +1,23 @@
 <div class="container">
-  <button (click)="toggle()" class="btn-shopping-cart ">shoping cart</button>
-  <div class="cart">
+  <button (click)="toggle()" class="btn-shopping-cart "><img class="icon-shoping" src="../../assets/shoping cart icon/shopping-cart.svg" style="height: 30px;width: 30px;/"></button>
     
     <ul class="cart-items" *ngIf="isShowing">
       <h2>shopping-cart</h2>
     <hr>
-      <li class="cart-item" *ngFor="let userbasket of list ">
+      <li class="cart-item" *ngFor="let userbasket of list ;let i = index  ">
         <img src="{{userbasket.image }}" class="cart-img" style="width: 50px;height: 50px;"><br>
         <h6>discription:{{userbasket.title }} </h6><br>
-        <h4> price:{{userbasket.price|currency}} </h4><br>
-        <button class="btn-delet" (click)="deletItem(userbasket)">Delet</button>
+        <h4> price:{{userbasket.price|currency}} </h4>
+        <button class="btn-delet" (click)="removeItem(i)"><img class="icon-trash" src="../../assets/shoping cart icon/delete.svg" style="height: 30px;width: 30px;/"></button>
 
     </li>
     <hr>
-    <h3>total:</h3>
+    <h1>total:</h1>
     </ul>
     
 
   </div>
-</div>
+
   
                 
                   

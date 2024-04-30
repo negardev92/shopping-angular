@@ -6,32 +6,34 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./shoping-cart.component.css']
 })
 export class ShopingCartComponent implements OnInit {
-productitem: any;
 
+isShowing: boolean;
 @Input() list:[];
 
-
+cartTotal:number;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  isShowing: boolean;
+  callMethods() {
+    this.toggle();
+    
+}
     
   toggle() {
-     
      this.isShowing = !this.isShowing;
+    
   }
   
-  callMethods() {
-      this.toggle();
+ 
+  removeItem(index){
+    this.list.splice(index, 1);
+    
+   
   }
   
-  deletItem(list){
-    this.list.pop();
   
-  }
   
   
 }

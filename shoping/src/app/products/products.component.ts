@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit {
   let item = this.products.find(i => i.id === event.id);
   if(item != null){
      this.userbasket.push(item);
-     console.log(this.userbasket)
+     
   }
   let  dublicate = this.userbasket.filter((item, index) => this.userbasket.indexOf(item) !== index);
      console.log(dublicate)
