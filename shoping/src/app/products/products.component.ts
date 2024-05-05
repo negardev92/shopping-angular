@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import{ProductapiService} from '../productapi.service';
-
+import { ProductapiService } from '../productapi.service';
+import { Product } from '../models/Product';
+import { UserBasket } from '../models/UserBasket';
 
 @Component({
   selector: 'app-products',
@@ -8,32 +9,27 @@ import{ProductapiService} from '../productapi.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  products = [];
-  userbasket= [];
-  items =[] ;
-  
-   
-  
-  constructor(private productapiService:ProductapiService,) { }
-  
+  products: Product[] = [];
+  userbasket: UserBasket[] = [];
+  items = [];
+
+  constructor(private productapiService: ProductapiService,) { }
+
   ngOnInit(): void {
-
-    this.productapiService.getData().subscribe((data) => {this.products = data});
+    this.productapiService.getData().subscribe((data) => { this.products = data });
   }
 
-  
- getId(event){
-  let item = this.products.find(i => i.id === event.id);
-  if(item != null){
-     this.userbasket.push(item);
-     
+  getId(event) {
+    let product: Product = this.products.find(i => i.id === event.id);
+
+    const existingProduct = this.userbasket.find((item) => item.id === product.id);
+
+    if (existingProduct) {
+      existingProduct.count++;
+    } else {
+      this.userbasket.push({ ...product, count: 1 });
+    }
+
+    console.table(this.userbasket);
   }
-  let  dublicate = this.userbasket.filter((item, index) => this.userbasket.indexOf(item) !== index);
-     console.log(dublicate)
-   
-  }
- 
- }
-
-
-
+}

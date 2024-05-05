@@ -11,24 +11,16 @@
         <li>Affordable</li>
     </ul>
     <app-shoping-cart [list]="userbasket"></app-shoping-cart>
-    </div>
-    
-    
+    </div>    
 </div>
 <div  class="contianer">
     <div  class="products">
         <ul class="product-ul">
-            <li class="product-li" *ngFor="let product of products" (click)="getId(product)">
-               
+            <li class="product-li" *ngFor="let product of products" (click)="getId(product)">               
                 <img src="{{product.image }}" class="product-img"><br>
                 <h5>discription:{{product.title }} </h5><br>
                 <h3> price:{{product.price|currency}} </h3><br>
-
-                <button class="btn-add" >ADD</button>
-        
-            </li>
-          
+                <button class="btn-add" >ADD</button>        
+            </li>          
         </ul>
-        
-        
 </div>

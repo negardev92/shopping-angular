@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { UserBasket } from '../models/UserBasket';
 
 @Component({
   selector: 'app-shoping-cart',
@@ -7,10 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ShopingCartComponent implements OnInit {
 
-isShowing: boolean;
-@Input() list:[];
+  isShowing: boolean;
+  @Input() list: [];
 
-cartTotal:number;
+  cartTotal: number;
 
   constructor() { }
 
@@ -18,22 +19,24 @@ cartTotal:number;
   }
   callMethods() {
     this.toggle();
-    
-}
-    
+
+  }
+
   toggle() {
-     this.isShowing = !this.isShowing;
-    
+    this.isShowing = !this.isShowing;
   }
-  
- 
-  removeItem(index){
+
+  removeItem(index) {
     this.list.splice(index, 1);
-    
-   
   }
-  
-  
-  
-  
+
+  getTotalPrice(userbaskets: UserBasket[]) {
+    let totalAmount = 0;
+
+    userbaskets.forEach(basket => {
+      totalAmount = totalAmount + (basket.price * basket.count);
+    });
+
+    return totalAmount;
+  }
 }

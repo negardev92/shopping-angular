@@ -8,11 +8,12 @@
         <img src="{{userbasket.image }}" class="cart-img" style="width: 50px;height: 50px;"><br>
         <h6>discription:{{userbasket.title }} </h6><br>
         <h4> price:{{userbasket.price|currency}} </h4>
+        <h4> count:{{userbasket.count}}</h4>
         <button class="btn-delet" (click)="removeItem(i)"><img class="icon-trash" src="../../assets/shoping cart icon/delete.svg" style="height: 30px;width: 30px;/"></button>
 
     </li>
     <hr>
-    <h1>total:</h1>
+    <h1>total:{{getTotalPrice(list)}}</h1>
     </ul>
     
 
