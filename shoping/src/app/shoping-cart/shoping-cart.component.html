@@ -2,14 +2,15 @@
   <button (click)="toggle()" class="btn-shopping-cart "><img class="icon-shoping" src="../../assets/shoping cart icon/shopping-cart.svg" style="height: 30px;width: 30px;/"></button>
     
     <ul class="cart-items" *ngIf="isShowing">
-      <h2>shopping-cart</h2>
+      <h2>shopping-cart </h2>
+      <button>close</button>
     <hr>
       <li class="cart-item" *ngFor="let userbasket of list ;let i = index  ">
         <img src="{{userbasket.image }}" class="cart-img" style="width: 50px;height: 50px;"><br>
-        <h6>discription:{{userbasket.title }} </h6><br>
-        <h4> price:{{userbasket.price|currency}} </h4>
-        <h4> count:{{userbasket.count}}</h4>
-        <button class="btn-delet" (click)="removeItem(i)"><img class="icon-trash" src="../../assets/shoping cart icon/delete.svg" style="height: 30px;width: 30px;/"></button>
+        <h6>discription:  {{userbasket.title }} </h6><br>
+        <h4> price:  {{userbasket.price|currency}} </h4>
+        <h4>count:  {{userbasket.count}}</h4>
+        <button class="btn-delet" (click)="removeItem(i)"><img class="icon-trash" src="../../assets/shoping cart icon/delete.svg" style="height: 20px;width: 20px;/"></button>
 
     </li>
     <hr>

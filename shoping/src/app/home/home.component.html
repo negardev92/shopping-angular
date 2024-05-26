@@ -1,8 +1,9 @@
-<div class="continer">
-    <div class="welcom-page">
-      <img  class="img-welcom" src="../../assets/search-product-on-online-stores.png"/>
-       <h2 class="welcom-txt">Enjoy your shopping with us
-        <a routerLink="/products" routerLinkActive="active" ariaCurrentWhenActive="page"><button class="btn-welcom">Products>>>>
-        </button></a></h2>
-     </div>
-  </div>
+<form (ngSubmit)="login()">
+  <label for="username">Username:</label>
+  <input type="text" id="username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+
+  <button type="submit">Login</button>
+</form>

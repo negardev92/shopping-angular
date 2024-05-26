@@ -6,23 +6,28 @@
     background-color: rgba(237, 241, 241, 0.555);
     position: absolute;
     right: 5px;
-    width: 400px;
+    width: 500px;
+    top: 60px;
+    z-index: 1px;
 
     
     
 }
 .cart-item{
     width: 380px;
-    height: 100px;
+    height: 150px;
     list-style: none;
     display: flex;
+   
 }
 h6{
     margin: 15px;
-    width: 80px;
+    width: 250px;
+  
 }
 h4{
     margin: 15px;
+    width: 200px;
 }
 .btn-delet{
     width: 50px;
@@ -30,11 +35,13 @@ h4{
     border: none;
     cursor: pointer;
     border-radius: 50px;
+    font-size: medium;
+    margin-left:20px;
 }
 .btn-shopping-cart ,.icon-shoping{
     position: absolute;
     right: 8px;
-    top: 25px;
+    top:35px;
     width: 100px;
     height:45px;
     border: none;

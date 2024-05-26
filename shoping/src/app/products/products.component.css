@@ -4,6 +4,8 @@
     font-weight: 400;
     font-size: 40px;
     color: rgb(4, 102, 69);
+    justify-content: center;
+    align-items: center;
 }
 .about li{
     font-size: 20px; 
@@ -16,6 +18,8 @@
 .product-ul{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     
     
     
@@ -23,9 +27,10 @@
 .product-li{
     border: 1px solid  rgba(240, 237, 237, 0.582);
     width: 300px;height: 410px;
+    justify-content: center;
     text-align: center;
     align-items: center;
-    padding: 10px;
+    padding: 1px;
     gap: 5px;
     list-style: none;
     border-radius: 1%;
@@ -39,44 +44,26 @@
 }
 h5{
     width: 300px;
-    height: 5px;
+    height: 35px;
     font-family: 'Times New Roman', Times, serif;
-    text-align: left;
-    align-items: left;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 
 }
 h3{
     font-family: "Kalam", cursive;
 }
 .btn-add{
-font-size: 14px;
-  font-weight: 200;
-  letter-spacing: 1px;
   outline: 0;
-  border: 1px solid rgb(4, 102, 69);;
   cursor: pointer;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  background-color:transparent;
   color: aliceblue;
   font-family: "Kalam", cursive;
+  border:none;
 }
 
 
-
-.btn-add:after {
-  content: "";
-  background-color: rgba(2, 112, 76, 0.493);
-  width: 100%;
-  z-index: -1;
-  position: absolute;
-  height: 100%;
-  top: 7px;
-  left: 7px;
-  transition: 0.2s;
-}
 
 .btn-add:hover:after {
   top: 0px;
